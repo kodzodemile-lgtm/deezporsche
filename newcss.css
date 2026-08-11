@@ -30,7 +30,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(5, 5, 5, 0.95);
+  background-color: rgba(5, 5, 5, 0.96);
   z-index: 3000;
   display: flex;
   justify-content: center;
@@ -55,6 +55,20 @@ body {
   margin-top: -20px;
   margin-bottom: 25px;
   font-size: 0.85rem;
+}
+
+.selection-confirmation {
+  background-color: #1a1a1a;
+  border: 1px solid var(--border-gold);
+  padding: 12px;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.selection-confirmation strong {
+  color: var(--gold);
 }
 
 .gateway-card select {
@@ -734,11 +748,7 @@ footer {
   font-size: 0.85rem;
 }
 
-/* ===================================================
-   RESPONSIVE MEDIA QUERIES (TABLETS & MOBILE PHONES)
-   =================================================== */
-
-/* Tablet & Mobile Screens (768px and below) */
+/* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -798,7 +808,6 @@ footer {
   }
 }
 
-/* Small Mobile Screens (480px and below) */
 @media (max-width: 480px) {
   .logo {
     font-size: 1.5rem;

@@ -6,15 +6,15 @@
   <title>Porsche - Heritage, Compare & Shop</title>
   <link rel="stylesheet" href="newcss.css">
 </head>
-'/<body>
+<body>
 
   <div id="regionGateway" class="gateway-overlay">
     <div class="gateway-card">
-      <h2 class="section-title">Select Region & Language</h2>
-      <p class="gateway-subtitle">Choose your location to enter the Porsche Experience.</p>
+      <h2 class="section-title" data-i18n="select_region_lang">Select Region & Language</h2>
+      <p class="gateway-subtitle" data-i18n="gateway_subtitle">Choose your location and preferred language to enter the Porsche Experience.</p>
       
       <div class="form-group">
-        <label for="languageSelect">Language</label>
+        <label for="languageSelect" data-i18n="label_language">Language</label>
         <select id="languageSelect">
           <option value="en">English</option>
           <option value="de">Deutsch (German)</option>
@@ -24,53 +24,57 @@
       </div>
 
       <div class="form-group">
-        <label for="regionSearch">Search Region or Country</label>
+        <label for="regionSearch" data-i18n="label_search_region">Search Region or Country</label>
         <input type="text" id="regionSearch" placeholder="Type region (e.g. Africa, Europe) or country...">
+      </div>
+
+      <div id="selectionConfirmation" class="selection-confirmation">
+        <span data-i18n="your_selection">Your Selection:</span> <strong id="selectedRegionText">Global</strong>
       </div>
 
       <div class="region-list" id="regionList">
         <div class="region-item" data-region="africa">
           <button class="region-btn">Africa <span class="arrow">&#9660;</span></button>
           <ul class="country-list">
-            <li><a href="#" class="country-link">South Africa</a></li>
-            <li><a href="#" class="country-link">Egypt</a></li>
-            <li><a href="#" class="country-link">Nigeria</a></li>
-            <li><a href="#" class="country-link">Morocco</a></li>
-            <li><a href="#" class="country-link">Kenya</a></li>
+            <li><a href="#" class="country-link" data-continent="Africa" data-country="South Africa">South Africa</a></li>
+            <li><a href="#" class="country-link" data-continent="Africa" data-country="Egypt">Egypt</a></li>
+            <li><a href="#" class="country-link" data-continent="Africa" data-country="Nigeria">Nigeria</a></li>
+            <li><a href="#" class="country-link" data-continent="Africa" data-country="Morocco">Morocco</a></li>
+            <li><a href="#" class="country-link" data-continent="Africa" data-country="Kenya">Kenya</a></li>
           </ul>
         </div>
 
         <div class="region-item" data-region="europe">
           <button class="region-btn">Europe <span class="arrow">&#9660;</span></button>
           <ul class="country-list">
-            <li><a href="#" class="country-link">Germany</a></li>
-            <li><a href="#" class="country-link">United Kingdom</a></li>
-            <li><a href="#" class="country-link">France</a></li>
-            <li><a href="#" class="country-link">Italy</a></li>
+            <li><a href="#" class="country-link" data-continent="Europe" data-country="Germany">Germany</a></li>
+            <li><a href="#" class="country-link" data-continent="Europe" data-country="United Kingdom">United Kingdom</a></li>
+            <li><a href="#" class="country-link" data-continent="Europe" data-country="France">France</a></li>
+            <li><a href="#" class="country-link" data-continent="Europe" data-country="Italy">Italy</a></li>
           </ul>
         </div>
 
         <div class="region-item" data-region="north america">
           <button class="region-btn">North America <span class="arrow">&#9660;</span></button>
           <ul class="country-list">
-            <li><a href="#" class="country-link">United States</a></li>
-            <li><a href="#" class="country-link">Canada</a></li>
-            <li><a href="#" class="country-link">Mexico</a></li>
+            <li><a href="#" class="country-link" data-continent="North America" data-country="United States">United States</a></li>
+            <li><a href="#" class="country-link" data-continent="North America" data-country="Canada">Canada</a></li>
+            <li><a href="#" class="country-link" data-continent="North America" data-country="Mexico">Mexico</a></li>
           </ul>
         </div>
 
         <div class="region-item" data-region="asia pacific">
           <button class="region-btn">Asia Pacific <span class="arrow">&#9660;</span></button>
           <ul class="country-list">
-            <li><a href="#" class="country-link">Japan</a></li>
-            <li><a href="#" class="country-link">China</a></li>
-            <li><a href="#" class="country-link">Australia</a></li>
-            <li><a href="#" class="country-link">Singapore</a></li>
+            <li><a href="#" class="country-link" data-continent="Asia Pacific" data-country="Japan">Japan</a></li>
+            <li><a href="#" class="country-link" data-continent="Asia Pacific" data-country="China">China</a></li>
+            <li><a href="#" class="country-link" data-continent="Asia Pacific" data-country="Australia">Australia</a></li>
+            <li><a href="#" class="country-link" data-continent="Asia Pacific" data-country="Singapore">Singapore</a></li>
           </ul>
         </div>
       </div>
 
-      <button id="enterSiteBtn" class="btn" style="width: 100%; margin-top: 20px;">Proceed to Website</button>
+      <button id="enterSiteBtn" class="btn" style="width: 100%; margin-top: 20px;" data-i18n="btn_enter">Proceed to Website</button>
     </div>
   </div>
 
@@ -78,68 +82,68 @@
     <div class="logo">PORSCHE</div>
     <nav>
       <ul>
-        <li><a href="#history">History</a></li>
-        <li><a href="#designers">Designers</a></li>
-        <li><a href="#models">Lineup</a></li>
-        <li><a href="#compare">Compare</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#ai-assistant">Porsche AI</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button class="btn-outline-sm" id="changeRegionBtn">🌐 Region / Lang</button></li>
-        <li><button class="btn-outline-sm" id="openRegisterModal">Register</button></li>
+        <li><a href="#history" data-i18n="nav_history">History</a></li>
+        <li><a href="#designers" data-i18n="nav_designers">Designers</a></li>
+        <li><a href="#models" data-i18n="nav_lineup">Lineup</a></li>
+        <li><a href="#compare" data-i18n="nav_compare">Compare</a></li>
+        <li><a href="#shop" data-i18n="nav_shop">Shop</a></li>
+        <li><a href="#ai-assistant" data-i18n="nav_ai">Porsche AI</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        <li><button class="btn-outline-sm" id="changeRegionBtn">🌐 <span data-i18n="nav_region">Region / Lang</span></button></li>
+        <li><button class="btn-outline-sm" id="openRegisterModal" data-i18n="nav_register">Register</button></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
     <div class="hero-badge" id="selectedRegionBadge">Region: Global | Lang: EN</div>
-    <h1>Driven by <span>Dreams</span></h1>
-    <p>Engineered with precision, designed for performance, and built on timeless heritage.</p>
+    <h1 data-i18n="hero_title">Driven by <span>Dreams</span></h1>
+    <p data-i18n="hero_desc">Engineered with precision, designed for performance, and built on timeless heritage.</p>
     <div class="hero-buttons">
-      <a href="#models" class="btn">Explore Lineup</a>
-      <a href="#shop" class="btn-outline">Go to Shop</a>
-      <a href="https://www.porsche.com" target="_blank" class="btn-outline">Official Porsche Page</a>
+      <a href="#models" class="btn" data-i18n="btn_explore">Explore Lineup</a>
+      <a href="#shop" class="btn-outline" data-i18n="btn_shop">Go to Shop</a>
+      <a href="https://www.porsche.com" target="_blank" class="btn-outline" data-i18n="btn_official">Official Porsche Page</a>
     </div>
   </section>
 
   <section id="history">
-    <h2 class="section-title">Brand History</h2>
+    <h2 class="section-title" data-i18n="title_history">Brand History</h2>
     <div class="history-grid">
       <div class="card">
-        <h3>1931 — The Founding</h3>
-        <p>Founded by Ferdinand Porsche in Stuttgart, Germany. The company initially provided vehicle development and engineering consultation before producing its own sports cars.</p>
+        <h3 data-i18n="hist_1_title">1931 — The Founding</h3>
+        <p data-i18n="hist_1_desc">Founded by Ferdinand Porsche in Stuttgart, Germany. The company initially provided vehicle development and engineering consultation before producing its own sports cars.</p>
       </div>
       <div class="card">
-        <h3>1948 — Porsche 356</h3>
-        <p>Ferry Porsche, son of Ferdinand, created the first vehicle to bear the Porsche nameplate—the 356. It laid the foundation for lightweight, precise sports cars.</p>
+        <h3 data-i18n="hist_2_title">1948 — Porsche 356</h3>
+        <p data-i18n="hist_2_desc">Ferry Porsche, son of Ferdinand, created the first vehicle to bear the Porsche nameplate—the 356. It laid the foundation for lightweight, precise sports cars.</p>
       </div>
       <div class="card">
-        <h3>1963 — The 911 Icon</h3>
-        <p>Unveiled at the Frankfurt Motor Show, the legendary rear-engine 911 was introduced, cementing Porsche's signature identity and racing pedigree.</p>
+        <h3 data-i18n="hist_3_title">1963 — The 911 Icon</h3>
+        <p data-i18n="hist_3_desc">Unveiled at the Frankfurt Motor Show, the legendary rear-engine 911 was introduced, cementing Porsche's signature identity and racing pedigree.</p>
       </div>
     </div>
   </section>
 
   <section id="designers" class="dark-section">
-    <h2 class="section-title">Design Pioneers</h2>
+    <h2 class="section-title" data-i18n="title_designers">Design Pioneers</h2>
     <div class="history-grid">
       <div class="card">
         <h3>Ferdinand Porsche</h3>
-        <p>The engineering visionary who established the firm and pioneered aerodynamic, rear-engine vehicle concepts that shaped modern automotive design.</p>
+        <p data-i18n="des_1_desc">The engineering visionary who established the firm and pioneered aerodynamic, rear-engine vehicle concepts that shaped modern automotive design.</p>
       </div>
       <div class="card">
         <h3>F. A. Porsche</h3>
-        <p>Grandson of the founder, Ferdinand Alexander "Butzi" Porsche styled the timeless silhouette of the original 911, establishing Porsche's design language.</p>
+        <p data-i18n="des_2_desc">Grandson of the founder, Ferdinand Alexander "Butzi" Porsche styled the timeless silhouette of the original 911, establishing Porsche's design language.</p>
       </div>
       <div class="card">
         <h3>Michael Mauer</h3>
-        <p>Porsche’s Chief Designer (since 2004), responsible for evolving classic proportions into modern electric and hybrid eras with models like the Taycan.</p>
+        <p data-i18n="des_3_desc">Porsche’s Chief Designer (since 2004), responsible for evolving classic proportions into modern electric and hybrid eras with models like the Taycan.</p>
       </div>
     </div>
   </section>
 
   <section id="models">
-    <h2 class="section-title">Model Lineup</h2>
+    <h2 class="section-title" data-i18n="title_models">Model Lineup</h2>
     <div class="models-grid">
       
       <div class="model-card">
@@ -147,9 +151,9 @@
           <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=600&q=80" alt="Porsche 911">
         </div>
         <h3>911</h3>
-        <span class="tag">The Iconic Sports Car</span>
-        <p>Timeless silhouette featuring rear-engine dynamics, precision driving, and race-bred heritage.</p>
-        <a href="https://www.porsche.com/usa/models/911/" target="_blank" class="btn-sm">More About 911</a>
+        <span class="tag" data-i18n="tag_911">The Iconic Sports Car</span>
+        <p data-i18n="desc_911">Timeless silhouette featuring rear-engine dynamics, precision driving, and race-bred heritage.</p>
+        <a href="https://www.porsche.com/usa/models/911/" target="_blank" class="btn-sm" data-i18n="more_about_911">More About 911</a>
       </div>
 
       <div class="model-card">
@@ -158,8 +162,8 @@
         </div>
         <h3>718</h3>
         <span class="tag">Cayman & Boxster</span>
-        <p>Mid-engine layout engineered for optimal weight balance, agility, and dynamic handling.</p>
-        <a href="https://www.porsche.com/usa/models/718/" target="_blank" class="btn-sm">More About 718</a>
+        <p data-i18n="desc_718">Mid-engine layout engineered for optimal weight balance, agility, and dynamic handling.</p>
+        <a href="https://www.porsche.com/usa/models/718/" target="_blank" class="btn-sm" data-i18n="more_about_718">More About 718</a>
       </div>
 
       <div class="model-card">
@@ -167,9 +171,9 @@
           <img src="https://images.unsplash.com/photo-1611821064430-0d40291d0f0b?auto=format&fit=crop&w=600&q=80" alt="Porsche Taycan">
         </div>
         <h3>Taycan</h3>
-        <span class="tag">All-Electric Performance</span>
-        <p>Advanced 800-volt electric powertrain delivering instant torque and sports car acceleration.</p>
-        <a href="https://www.porsche.com/usa/models/taycan/" target="_blank" class="btn-sm">More About Taycan</a>
+        <span class="tag" data-i18n="tag_taycan">All-Electric Performance</span>
+        <p data-i18n="desc_taycan">Advanced 800-volt electric powertrain delivering instant torque and sports car acceleration.</p>
+        <a href="https://www.porsche.com/usa/models/taycan/" target="_blank" class="btn-sm" data-i18n="more_about_taycan">More About Taycan</a>
       </div>
 
       <div class="model-card">
@@ -177,9 +181,9 @@
           <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80" alt="Porsche Panamera">
         </div>
         <h3>Panamera</h3>
-        <span class="tag">Luxury Performance Sedan</span>
-        <p>Combines track-capable dynamics with four-door executive luxury and grand touring comfort.</p>
-        <a href="https://www.porsche.com/usa/models/panamera/" target="_blank" class="btn-sm">More About Panamera</a>
+        <span class="tag" data-i18n="tag_panamera">Luxury Performance Sedan</span>
+        <p data-i18n="desc_panamera">Combines track-capable dynamics with four-door executive luxury and grand touring comfort.</p>
+        <a href="https://www.porsche.com/usa/models/panamera/" target="_blank" class="btn-sm" data-i18n="more_about_panamera">More About Panamera</a>
       </div>
 
       <div class="model-card">
@@ -187,9 +191,9 @@
           <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=600&q=80" alt="Porsche Cayenne">
         </div>
         <h3>Cayenne</h3>
-        <span class="tag">Luxury SUV</span>
-        <p>Full-size luxury SUV combining high performance, off-road capabilities, and daily utility.</p>
-        <a href="https://www.porsche.com/usa/models/cayenne/" target="_blank" class="btn-sm">More About Cayenne</a>
+        <span class="tag" data-i18n="tag_cayenne">Luxury SUV</span>
+        <p data-i18n="desc_cayenne">Full-size luxury SUV combining high performance, off-road capabilities, and daily utility.</p>
+        <a href="https://www.porsche.com/usa/models/cayenne/" target="_blank" class="btn-sm" data-i18n="more_about_cayenne">More About Cayenne</a>
       </div>
 
       <div class="model-card">
@@ -197,21 +201,21 @@
           <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80" alt="Porsche Macan">
         </div>
         <h3>Macan</h3>
-        <span class="tag">Compact SUV</span>
-        <p>A compact crossover engineered to offer sporty handling alongside flexible everyday functionality.</p>
-        <a href="https://www.porsche.com/usa/models/macan/" target="_blank" class="btn-sm">More About Macan</a>
+        <span class="tag" data-i18n="tag_macan">Compact SUV</span>
+        <p data-i18n="desc_macan">A compact crossover engineered to offer sporty handling alongside flexible everyday functionality.</p>
+        <a href="https://www.porsche.com/usa/models/macan/" target="_blank" class="btn-sm" data-i18n="more_about_macan">More About Macan</a>
       </div>
 
     </div>
   </section>
 
   <section id="compare" class="compare-section">
-    <h2 class="compare-title">Model Comparison Tool</h2>
-    <p class="compare-subtitle">Select two Porsche models to compare specifications and performance side-by-side.</p>
+    <h2 class="compare-title" data-i18n="title_compare">Model Comparison Tool</h2>
+    <p class="compare-subtitle" data-i18n="subtitle_compare">Select two Porsche models to compare specifications and performance side-by-side.</p>
     
     <div class="compare-selectors">
       <div class="select-box">
-        <label for="carSelect1">Select Vehicle 1</label>
+        <label for="carSelect1" data-i18n="label_vehicle_1">Select Vehicle 1</label>
         <select id="carSelect1">
           <option value="911">Porsche 911 Carrera</option>
           <option value="718">Porsche 718 Cayman</option>
@@ -223,7 +227,7 @@
       </div>
 
       <div class="select-box">
-        <label for="carSelect2">Select Vehicle 2</label>
+        <label for="carSelect2" data-i18n="label_vehicle_2">Select Vehicle 2</label>
         <select id="carSelect2">
           <option value="718">Porsche 718 Cayman</option>
           <option value="911">Porsche 911 Carrera</option>
@@ -236,16 +240,14 @@
     </div>
 
     <div class="compare-grid">
-      <div class="compare-card" id="compareCard1">
-        </div>
-      <div class="compare-card" id="compareCard2">
-        </div>
+      <div class="compare-card" id="compareCard1"></div>
+      <div class="compare-card" id="compareCard2"></div>
     </div>
   </section>
 
   <section id="shop">
-    <h2 class="section-title">Porsche Showroom & Shop</h2>
-    <p style="text-align: center; color: var(--text-gray); margin-bottom: 40px;">Browse current models, explore baseline configurations, and request purchasing details.</p>
+    <h2 class="section-title" data-i18n="title_shop">Porsche Showroom & Shop</h2>
+    <p style="text-align: center; color: var(--text-gray); margin-bottom: 40px;" data-i18n="subtitle_shop">Browse current models, explore baseline configurations, and request purchasing details.</p>
     
     <div class="shop-grid">
       <div class="shop-card">
@@ -254,7 +256,7 @@
           <h3>Porsche 911 Carrera</h3>
           <p class="price">$114,400 Starting MSRP</p>
           <p class="desc">Engine: 3.0L Twin-Turbo Flat-6 | 379 HP | 0–60: 4.0s</p>
-          <button class="btn buy-btn" data-model="Porsche 911 Carrera">Inquire to Buy</button>
+          <button class="btn buy-btn" data-model="Porsche 911 Carrera" data-i18n="btn_inquire">Inquire to Buy</button>
         </div>
       </div>
 
@@ -264,7 +266,7 @@
           <h3>Porsche 718 Cayman</h3>
           <p class="price">$68,300 Starting MSRP</p>
           <p class="desc">Engine: 2.0L Turbo Flat-4 | 300 HP | 0–60: 4.9s</p>
-          <button class="btn buy-btn" data-model="Porsche 718 Cayman">Inquire to Buy</button>
+          <button class="btn buy-btn" data-model="Porsche 718 Cayman" data-i18n="btn_inquire">Inquire to Buy</button>
         </div>
       </div>
 
@@ -274,7 +276,7 @@
           <h3>Porsche Taycan</h3>
           <p class="price">$99,400 Starting MSRP</p>
           <p class="desc">Powertrain: Single Rear Motor EV | 402 HP | 0–60: 4.5s</p>
-          <button class="btn buy-btn" data-model="Porsche Taycan">Inquire to Buy</button>
+          <button class="btn buy-btn" data-model="Porsche Taycan" data-i18n="btn_inquire">Inquire to Buy</button>
         </div>
       </div>
 
@@ -284,7 +286,7 @@
           <h3>Porsche Panamera</h3>
           <p class="price">$102,800 Starting MSRP</p>
           <p class="desc">Engine: 2.9L Twin-Turbo V6 | 348 HP | 0–60: 5.0s</p>
-          <button class="btn buy-btn" data-model="Porsche Panamera">Inquire to Buy</button>
+          <button class="btn buy-btn" data-model="Porsche Panamera" data-i18n="btn_inquire">Inquire to Buy</button>
         </div>
       </div>
 
@@ -294,7 +296,7 @@
           <h3>Porsche Cayenne</h3>
           <p class="price">$79,200 Starting MSRP</p>
           <p class="desc">Engine: 3.0L Turbo V6 | 348 HP | 0–60: 5.7s</p>
-          <button class="btn buy-btn" data-model="Porsche Cayenne">Inquire to Buy</button>
+          <button class="btn buy-btn" data-model="Porsche Cayenne" data-i18n="btn_inquire">Inquire to Buy</button>
         </div>
       </div>
 
@@ -304,17 +306,17 @@
           <h3>Porsche Macan</h3>
           <p class="price">$62,900 Starting MSRP</p>
           <p class="desc">Engine: 2.0L Turbo Inline-4 | 261 HP | 0–60: 6.0s</p>
-          <button class="btn buy-btn" data-model="Porsche Macan">Inquire to Buy</button>
+          <button class="btn buy-btn" data-model="Porsche Macan" data-i18n="btn_inquire">Inquire to Buy</button>
         </div>
       </div>
     </div>
   </section>
 
   <section id="ai-assistant" class="dark-section">
-    <h2 class="section-title">Porsche Knowledge Assistant</h2>
+    <h2 class="section-title" data-i18n="title_ai">Porsche Knowledge Assistant</h2>
     <div class="ai-chat-container">
       <div class="chat-window" id="chatWindow">
-        <div class="chat-message ai">
+        <div class="chat-message ai" id="aiWelcomeMsg">
           Hello! I am your Porsche Virtual Assistant. Ask me questions like:
           <br>• <em>"When was Porsche made?"</em>
           <br>• <em>"What is the fastest Porsche made?"</em>
@@ -323,48 +325,48 @@
       </div>
       <form id="chatForm" class="chat-input-area">
         <input type="text" id="userInput" placeholder="Ask a question about Porsche..." required autocomplete="off">
-        <button type="submit" class="btn">Send</button>
+        <button type="submit" class="btn" data-i18n="btn_send">Send</button>
       </form>
     </div>
   </section>
 
   <section id="contact">
-    <h2 class="section-title">Get In Touch</h2>
+    <h2 class="section-title" data-i18n="title_contact">Get In Touch</h2>
     <form class="form-container" id="contactForm">
       <div class="form-group">
-        <label for="contactName">Full Name</label>
+        <label for="contactName" data-i18n="label_name">Full Name</label>
         <input type="text" id="contactName" placeholder="John Doe" required>
       </div>
       <div class="form-group">
-        <label for="contactEmail">Email Address</label>
+        <label for="contactEmail" data-i18n="label_email">Email Address</label>
         <input type="email" id="contactEmail" placeholder="john@example.com" required>
       </div>
       <div class="form-group">
-        <label for="contactMessage">Message</label>
+        <label for="contactMessage" data-i18n="label_message">Message</label>
         <textarea id="contactMessage" rows="5" placeholder="Inquire about models, test drives, or general questions..." required></textarea>
       </div>
-      <button type="submit" class="btn">Send Message</button>
+      <button type="submit" class="btn" data-i18n="btn_send_msg">Send Message</button>
     </form>
   </section>
 
   <div class="modal-backdrop" id="registerModal">
     <div class="modal-content">
       <span class="close-modal" id="closeRegisterModal">&times;</span>
-      <h2 class="section-title" style="margin-bottom: 20px;">Create Porsche Account</h2>
+      <h2 class="section-title" style="margin-bottom: 20px;" data-i18n="title_register">Create Porsche Account</h2>
       <form id="registerForm">
         <div class="form-group">
-          <label for="regUsername">Username</label>
+          <label for="regUsername" data-i18n="label_username">Username</label>
           <input type="text" id="regUsername" placeholder="Choose a username" required>
         </div>
         <div class="form-group">
-          <label for="regEmail">Email Address</label>
+          <label for="regEmail" data-i18n="label_email">Email Address</label>
           <input type="email" id="regEmail" placeholder="yourname@domain.com" required>
         </div>
         <div class="form-group">
-          <label for="regPassword">Password</label>
+          <label for="regPassword" data-i18n="label_password">Password</label>
           <input type="password" id="regPassword" placeholder="Enter password" required>
         </div>
-        <button type="submit" class="btn" style="width: 100%;">Create Account</button>
+        <button type="submit" class="btn" style="width: 100%;" data-i18n="btn_create_acc">Create Account</button>
       </form>
     </div>
   </div>
