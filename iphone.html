@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPhone & Porsche Showcase Platform</title>
+  <link rel="stylesheet" href="iphone17.css">
+</head>
+<body class="iphone-theme" id="mainBody">
+
+  <div id="regionGateway" class="gateway-overlay">
+    <div class="gateway-card">
+      <h2 data-i18n="select_region_lang">Select Region & Language</h2>
+      <p class="gateway-subtitle" data-i18n="gateway_subtitle">Choose your location and language to customize your experience.</p>
+      
+      <div class="form-group">
+        <label for="languageSelect" data-i18n="label_language">Language</label>
+        <select id="languageSelect">
+          <option value="en">English</option>
+          <option value="de">Deutsch (German)</option>
+          <option value="fr">Français (French)</option>
+          <option value="es">Español (Spanish)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="regionSearch" data-i18n="label_search_region">Search Region or Country</label>
+        <input type="text" id="regionSearch" placeholder="Type region (e.g. Africa, Europe) or country...">
+      </div>
+
+      <div id="selectionConfirmation" class="selection-confirmation">
+        <span data-i18n="your_selection">Your Selection:</span> <strong id="selectedRegionText">Global</strong>
+      </div>
+
+      <div class="region-list" id="regionList">
+        <div class="region-item" data-region="africa">
+          <button class="region-btn">Africa <span class="arrow">&#9660;</span></button>
+          <ul class="country-list">
+            <li><a href="#" class="country-link" data-continent="Africa" data-country="South Africa">South Africa</a></li>
+            <li><a href="#" class="country-link" data-continent="Africa" data-country="Egypt">Egypt</a></li>
+            <li><a href="#" class="country-link" data-continent="Africa" data-country="Nigeria">Nigeria</a></li>
+            <li><a href="#" class="country-link" data-continent="Africa" data-country="Kenya">Kenya</a></li>
+          </ul>
+        </div>
+        <div class="region-item" data-region="europe">
+          <button class="region-btn">Europe <span class="arrow">&#9660;</span></button>
+          <ul class="country-list">
+            <li><a href="#" class="country-link" data-continent="Europe" data-country="United Kingdom">United Kingdom</a></li>
+            <li><a href="#" class="country-link" data-continent="Europe" data-country="Germany">Germany</a></li>
+            <li><a href="#" class="country-link" data-continent="Europe" data-country="France">France</a></li>
+          </ul>
+        </div>
+        <div class="region-item" data-region="north america">
+          <button class="region-btn">North America <span class="arrow">&#9660;</span></button>
+          <ul class="country-list">
+            <li><a href="#" class="country-link" data-continent="North America" data-country="United States">United States</a></li>
+            <li><a href="#" class="country-link" data-continent="North America" data-country="Canada">Canada</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <button id="enterSiteBtn" class="btn" style="width: 100%; margin-top: 20px;" data-i18n="btn_enter">Proceed to Portal</button>
+    </div>
+  </div>
+
+  <header id="mainHeader">
+    <div class="logo" id="siteLogo">iPhone</div>
+    <nav>
+      <ul>
+        <li><a href="#history" data-i18n="nav_history">History</a></li>
+        <li><a href="#models" data-i18n="nav_lineup">Models</a></li>
+        <li><a href="#shop" data-i18n="nav_shop">Shop</a></li>
+        <li><a href="#compare" data-i18n="nav_compare">Compare</a></li>
+        <li><a href="#ai-assistant" data-i18n="nav_ai">AI Support</a></li>
+        <li><a href="#game-section" data-i18n="nav_game">Arcade</a></li>
+        <li><button class="btn-outline-sm" id="changeRegionBtn">🌐 <span data-i18n="nav_region">Region</span></button></li>
+        <li><button class="btn-outline-sm" id="openRegisterModal" data-i18n="nav_register">Register</button></li>
+      </ul>
+    </nav>
+    <button id="switchPageBtn" class="switch-page-btn" title="Switch to Porsche Experience">
+      <span id="switchText">Go to Porsche</span> <span class="arrow-icon">&rarr;</span>
+    </button>
+  </header>
+
+  <main id="iphonePage" class="page-view active-view">
+    <section class="hero iphone-hero">
+      <div class="hero-badge" id="selectedRegionBadge">Region: Global | Lang: EN</div>
+      <h1 data-i18n="iphone_hero_title">Elegance Meets <span>Innovation</span></h1>
+      <p data-i18n="iphone_hero_desc">Discover groundbreaking mobile engineering wrapped in iconic design.</p>
+      <div class="hero-buttons">
+        <a href="#models" class="btn" data-i18n="btn_explore">Explore Models</a>
+        <a href="https://www.apple.com/iphone/" target="_blank" class="btn-outline" data-i18n="btn_more_about">Official Apple Page</a>
+      </div>
+    </section>
+
+    <section id="history" class="content-section">
+      <h2 class="section-title" data-i18n="iphone_history_title">History of iPhone Design</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Steve Jobs & Jony Ive</h3>
+          <p data-i18n="iphone_hist_1">Unveiled in 2007 by Steve Jobs, designed in close collaboration with Jony Ive. It redefined mobile design with glass, aluminum, and intuitive multi-touch navigation.</p>
+        </div>
+        <div class="card">
+          <h3>Retina Display Era</h3>
+          <p data-i18n="iphone_hist_2">Introduced flat glass panels, unibody metal frames, and ultra-dense Retina displays that set new aesthetic standards for consumer devices.</p>
+        </div>
+        <div class="card">
+          <h3>All-Screen & Titanium</h3>
+          <p data-i18n="iphone_hist_3">Evolved to edge-to-edge Super Retina OLED displays, Face ID technology, and aerospace-grade titanium enclosures.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="models" class="content-section">
+      <h2 class="section-title" data-i18n="iphone_lineup_title">iPhone Models</h2>
+      <div class="grid-3">
+        <div class="model-card">
+          <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80" alt="iPhone 17 Pro Max">
+          <h3>iPhone 17 Pro Max</h3>
+          <p class="tag">Flagship Performance</p>
+          <p>A19 Pro chip, Titanium build, ProMotion OLED screen.</p>
+          <a href="https://www.apple.com/iphone/" target="_blank" class="btn-sm" data-i18n="btn_more_about">More About</a>
+        </div>
+        <div class="model-card">
+          <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=600&q=80" alt="iPhone 17">
+          <h3>iPhone 17</h3>
+          <p class="tag">Everyday Innovation</p>
+          <p>120Hz ProMotion display, A19 Bionic, 48MP Dual Camera.</p>
+          <a href="https://www.apple.com/iphone/" target="_blank" class="btn-sm" data-i18n="btn_more_about">More About</a>
+        </div>
+        <div class="model-card">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="iPhone Air">
+          <h3>iPhone Air</h3>
+          <p class="tag">Ultra-Slim Design</p>
+          <p>6mm ultra-thin lightweight profile engineered for extreme portability.</p>
+          <a href="https://www.apple.com/iphone/" target="_blank" class="btn-sm" data-i18n="btn_more_about">More About</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="content-section">
+      <h2 class="section-title" data-i18n="title_shop">iPhone Showroom & Shop</h2>
+      <div class="grid-3">
+        <div class="shop-card">
+          <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80" alt="iPhone 17 Pro Max">
+          <div class="shop-info">
+            <h3>iPhone 17 Pro Max</h3>
+            <p class="price">$1,199 Starting MSRP</p>
+            <p>A19 Pro | 6.9" ProMotion OLED | 48MP Triple Lens</p>
+            <button class="btn buy-btn" onclick="inquirePurchase('iPhone 17 Pro Max')">Order Now</button>
+          </div>
+        </div>
+        <div class="shop-card">
+          <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=600&q=80" alt="iPhone 17">
+          <div class="shop-info">
+            <h3>iPhone 17</h3>
+            <p class="price">$799 Starting MSRP</p>
+            <p>A19 Bionic | 6.1" OLED | 48MP Dual Camera</p>
+            <button class="btn buy-btn" onclick="inquirePurchase('iPhone 17')">Order Now</button>
+          </div>
+        </div>
+        <div class="shop-card">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="iPhone Air">
+          <div class="shop-info">
+            <h3>iPhone Air</h3>
+            <p class="price">$999 Starting MSRP</p>
+            <p>A19 Pro | 6mm Profile | 6.5" Display</p>
+            <button class="btn buy-btn" onclick="inquirePurchase('iPhone Air')">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="compare-container iphone-compare-theme">
+      <h2 class="section-title" style="color: #ffffff;">iPhone Model Comparison</h2>
+      <p style="text-align:center; color: #aaa; margin-bottom: 25px;">Compare specs, chips, and prices side-by-side.</p>
+      
+      <div class="compare-selects">
+        <select id="iphoneSelect1">
+          <option value="17promax">iPhone 17 Pro Max</option>
+          <option value="17">iPhone 17</option>
+          <option value="air">iPhone Air</option>
+        </select>
+        <select id="iphoneSelect2">
+          <option value="17">iPhone 17</option>
+          <option value="17promax">iPhone 17 Pro Max</option>
+          <option value="air">iPhone Air</option>
+        </select>
+      </div>
+
+      <div class="compare-grid">
+        <div class="compare-card" id="iphoneCompareCard1"></div>
+        <div class="compare-card" id="iphoneCompareCard2"></div>
+      </div>
+    </section>
+
+    <section id="ai-assistant" class="content-section">
+      <h2 class="section-title">iPhone & Knowledge AI</h2>
+      <div class="ai-box">
+        <div class="chat-log" id="iphoneChatLog">
+          <div class="msg ai">Hello! Ask me questions like: "When was Porsche made?", "What is the fastest iPhone made?", or "What are iPhone prices?"</div>
+        </div>
+        <form class="chat-input-form" onsubmit="handleAIChat(event, 'iphone')">
+          <input type="text" id="iphoneInput" placeholder="Ask a question..." required>
+          <button type="submit" class="btn" data-i18n="btn_send">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+  <main id="porschePage" class="page-view">
+    <section class="hero porsche-hero">
+      <div class="hero-badge">Porsche Luxury Experience</div>
+      <h1 data-i18n="porsche_hero_title">Driven by <span>Dreams</span></h1>
+      <p data-i18n="porsche_hero_desc">Uncompromising sports car performance, precision engineering, and timeless design.</p>
+      <div class="hero-buttons">
+        <a href="#porsche-models" class="btn" data-i18n="btn_explore">Explore Lineup</a>
+        <a href="https://www.porsche.com" target="_blank" class="btn-outline" data-i18n="btn_more_about">Official Porsche Page</a>
+      </div>
+    </section>
+
+    <section id="porsche-history" class="content-section">
+      <h2 class="section-title" data-i18n="porsche_history_title">History of Porsche Design</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Ferdinand Porsche</h3>
+          <p data-i18n="porsche_hist_1">Founded in 1931 in Stuttgart by Ferdinand Porsche. The brand pioneered lightweight automotive architecture and rear-engine innovation.</p>
+        </div>
+        <div class="card">
+          <h3>Ferdinand Alexander "Butzi" Porsche</h3>
+          <p data-i18n="porsche_hist_2">Grandson of the founder, he designed the iconic Porsche 911 in 1963, creating the world-renowned sloping flyline silhouettes.</p>
+        </div>
+        <div class="card">
+          <h3>Modern E-Performance</h3>
+          <p data-i18n="porsche_hist_3">Pioneered 800-volt high-performance electric architecture with the Taycan while preserving race-bred dynamics across all models.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="porsche-models" class="content-section">
+      <h2 class="section-title" data-i18n="porsche_lineup_title">Porsche Lineup</h2>
+      <div class="grid-3">
+        <div class="model-card">
+          <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=600&q=80" alt="Porsche 911 GT3 RS">
+          <h3>Porsche 911 GT3 RS</h3>
+          <p class="tag">Aerodynamic Perfection</p>
+          <p>518 HP naturally aspirated flat-six engineered for track precision.</p>
+          <a href="https://www.porsche.com" target="_blank" class="btn-sm" data-i18n="btn_more_about">More About</a>
+        </div>
+        <div class="model-card">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Porsche Taycan Turbo S">
+          <h3>Taycan Turbo S</h3>
+          <p class="tag">Electric Supercar</p>
+          <p>750 HP electric powertrain delivering 0-60 mph in 2.6 seconds.</p>
+          <a href="https://www.porsche.com" target="_blank" class="btn-sm" data-i18n="btn_more_about">More About</a>
+        </div>
+        <div class="model-card">
+          <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80" alt="Porsche Cayman GT4">
+          <h3>718 Cayman GT4</h3>
+          <p class="tag">Mid-Engine Balance</p>
+          <p>Mid-mounted 4.0L flat-six engine focused on pure driving feedback.</p>
+          <a href="https://www.porsche.com" target="_blank" class="btn-sm" data-i18n="btn_more_about">More About</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="porsche-shop" class="content-section">
+      <h2 class="section-title" data-i18n="title_shop">Porsche Showroom & Shop</h2>
+      <div class="grid-3">
+        <div class="shop-card">
+          <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=600&q=80" alt="Porsche 911 GT3 RS">
+          <div class="shop-info">
+            <h3>Porsche 911 GT3 RS</h3>
+            <p class="price">$241,300 Starting MSRP</p>
+            <p>518 HP | 0-60 in 3.0s | Top Speed: 184 mph</p>
+            <button class="btn buy-btn" onclick="inquirePurchase('Porsche 911 GT3 RS')">Order Now</button>
+          </div>
+        </div>
+        <div class="shop-card">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Porsche Taycan Turbo S">
+          <div class="shop-info">
+            <h3>Taycan Turbo S</h3>
+            <p class="price">$194,900 Starting MSRP</p>
+            <p>750 HP Electric | 0-60 in 2.6s | 800V Architecture</p>
+            <button class="btn buy-btn" onclick="inquirePurchase('Taycan Turbo S')">Order Now</button>
+          </div>
+        </div>
+        <div class="shop-card">
+          <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80" alt="Porsche Cayman GT4">
+          <div class="shop-info">
+            <h3>718 Cayman GT4</h3>
+            <p class="price">$106,500 Starting MSRP</p>
+            <p>414 HP Mid-Engine | 6-Speed Manual | Sports Suspension</p>
+            <button class="btn buy-btn" onclick="inquirePurchase('Porsche 718 Cayman GT4')">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="porsche-compare" class="compare-container porsche-compare-theme">
+      <h2 class="section-title" style="color: #ffffff;">Porsche Model Comparison</h2>
+      <p style="text-align:center; color: #aaa; margin-bottom: 25px;">Compare specs, performance, and prices side-by-side.</p>
+      
+      <div class="compare-selects">
+        <select id="porscheSelect1">
+          <option value="911gt3rs">Porsche 911 GT3 RS</option>
+          <option value="taycan">Porsche Taycan Turbo S</option>
+          <option value="cayman">Porsche 718 Cayman GT4</option>
+        </select>
+        <select id="porscheSelect2">
+          <option value="taycan">Porsche Taycan Turbo S</option>
+          <option value="911gt3rs">Porsche 911 GT3 RS</option>
+          <option value="cayman">Porsche 718 Cayman GT4</option>
+        </select>
+      </div>
+
+      <div class="compare-grid">
+        <div class="compare-card" id="porscheCompareCard1"></div>
+        <div class="compare-card" id="porscheCompareCard2"></div>
+      </div>
+    </section>
+
+    <section id="porsche-ai" class="content-section">
+      <h2 class="section-title">Porsche & Knowledge AI</h2>
+      <div class="ai-box">
+        <div class="chat-log" id="porscheChatLog">
+          <div class="msg ai">Hello! Ask me questions like: "When was Porsche made?", "What is the fastest Porsche made?", or "What are prices of Porsche models?"</div>
+        </div>
+        <form class="chat-input-form" onsubmit="handleAIChat(event, 'porsche')">
+          <input type="text" id="porscheInput" placeholder="Ask a question..." required>
+          <button type="submit" class="btn" data-i18n="btn_send">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+  <section id="contact" class="content-section">
+    <h2 class="section-title" data-i18n="title_contact">Contact Us</h2>
+    <form class="contact-form" id="contactForm">
+      <div class="form-group">
+        <label data-i18n="label_name">Full Name</label>
+        <input type="text" placeholder="John Doe" required>
+      </div>
+      <div class="form-group">
+        <label data-i18n="label_email">Email Address</label>
+        <input type="email" placeholder="john@example.com" required>
+      </div>
+      <div class="form-group">
+        <label data-i18n="label_message">Message</label>
+        <textarea rows="4" placeholder="Type your message..." required></textarea>
+      </div>
+      <button type="submit" class="btn" style="width: 100%;" data-i18n="btn_send_msg">Send Inquiry</button>
+    </form>
+  </section>
+
+  <section id="game-section" class="game-container">
+    <h2 class="section-title" style="color: var(--gold);">Arcade Break: Snake Game</h2>
+    <p style="color: var(--text-muted); margin-bottom: 15px;">Use Arrow Keys to control the snake and eat the black dot!</p>
+    <div class="game-wrapper">
+      <canvas id="snakeCanvas" width="300" height="300"></canvas>
+      <div class="game-controls">
+        <p>Score: <span id="snakeScore">0</span></p>
+        <button class="btn-sm" id="restartGameBtn">Restart Game</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-backdrop" id="registerModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeRegisterModal">&times;</span>
+      <h2 class="section-title" style="margin-bottom: 20px;" data-i18n="title_register">Account Registration</h2>
+      <form id="registerForm">
+        <div class="form-group">
+          <label data-i18n="label_username">Username</label>
+          <input type="text" placeholder="Enter username" required>
+        </div>
+        <div class="form-group">
+          <label data-i18n="label_email">Email Address</label>
+          <input type="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+          <label data-i18n="label_password">Password</label>
+          <input type="password" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;" data-i18n="btn_create_acc">Create Account</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Universal Experience Showcase — iPhone & Porsche Portal</p>
+  </footer>
+
+  <script src="iphone2.js"></script>
+</body>
+</html>
